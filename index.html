@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Convert temperatures between Celsius, Fahrenheit and Kelvin." />
+  <meta name="author" content="Sanketh Kumar" />
+  <title>Temperature Converter | Developed by Sanketh Kumar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <span class="brand">Temp Converter</span>
+    <span class="by">Developed by Sanketh Kumar</span>
+  </header>
+
+  <main class="page">
+    <!-- Converter -->
+    <section class="card">
+      <h1>Temperature Converter</h1>
+      <p class="muted">Convert between Celsius, Fahrenheit and Kelvin.</p>
+
+      <form id="form" novalidate>
+        <!-- 1. Input field -->
+        <label for="temp">Temperature</label>
+        <input id="temp" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 36.6" />
+
+        <!-- 2. Dropdown menus for the units -->
+        <div class="units">
+          <div>
+            <label for="from">From</label>
+            <select id="from">
+              <option value="celsius" selected>Celsius (°C)</option>
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+              <option value="kelvin">Kelvin (K)</option>
+            </select>
+          </div>
+          <button type="button" id="swap" class="swap" aria-label="Swap units">⇄</button>
+          <div>
+            <label for="to">To</label>
+            <select id="to">
+              <option value="celsius">Celsius (°C)</option>
+              <option value="fahrenheit" selected>Fahrenheit (°F)</option>
+              <option value="kelvin">Kelvin (K)</option>
+            </select>
+          </div>
+        </div>
+
+        <p id="error" class="error" role="alert"></p>
+
+        <!-- 3. Convert button -->
+        <div class="actions">
+          <button type="submit" class="btn">Convert</button>
+          <button type="button" id="reset" class="btn ghost">Reset</button>
+        </div>
+      </form>
+
+      <!-- 4. Display area for the converted temperature and unit -->
+      <div id="result" class="result" aria-live="polite" hidden>
+        <p id="resultLine" class="result-line"></p>
+        <p id="resultValue" class="result-value"></p>
+        <p id="feel" class="feel"></p>
+        <p id="formula" class="muted small"></p>
+      </div>
+    </section>
+
+    <!-- Quick reference -->
+    <section class="card">
+      <h2>Quick reference</h2>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>Point</th><th>°C</th><th>°F</th><th>K</th></tr></thead>
+          <tbody>
+            <tr><td>Absolute zero</td><td>-273.15</td><td>-459.67</td><td>0</td></tr>
+            <tr><td>Water freezes</td><td>0</td><td>32</td><td>273.15</td></tr>
+            <tr><td>Body temperature</td><td>37</td><td>98.6</td><td>310.15</td></tr>
+            <tr><td>Water boils</td><td>100</td><td>212</td><td>373.15</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Developer contact -->
+    <section class="card" id="contact">
+      <h2>Contact the developer</h2>
+      <p class="muted">Sanketh Kumar - B.Tech Computer Science Engineering, Sir M. Visvesvaraya College of Engineering (VTU)</p>
+      <ul class="contact-list">
+        <!-- EDIT: replace the placeholders below with your real details -->
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sanketh-k-387aa432a" target="_blank" rel="noopener">linkedin.com/in/sanketh-k-387aa432a</a></li>
+        <li><span>Email</span><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></li>
+        <li><span>GitHub</span><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">github.com/YOUR_GITHUB_USERNAME</a></li>
+        <li><span>Phone</span><a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> Temp Converter. Developed by Sanketh Kumar.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
